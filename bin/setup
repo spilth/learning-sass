@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ ! -f "`which brew`" ] ; then
+  echo "Installing Hombrew..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "Homebrew already installed!"
+fi
+
+brew update
+brew install node
+brew install yarn
+
+yarn install
+
+echo "Prerequisites and dependencies are installed!"
+echo "Type 'yarn run sass' to generate the CSS file."

@@ -1,0 +1,16 @@
+{
+  "name": "learning-sass",
+  "version": "1.0.0",
+  "description": "Learning Sass",
+  "scripts": {
+    "sass-clean": "rm -rf target",
+    "sass-prepare": "mkdir -p target",
+    "sass-generate": "yarn exec node-sass --output-style compressed source/learning.scss > target/learning.css",
+    "sass": "yarn run sass-clean && yarn run sass-prepare && yarn run sass-generate"
+  },
+  "author": "Brian Kelly",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
